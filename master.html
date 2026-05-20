@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f9f9f9; }
+        header { background: #333; color: #fff; padding: 15px; text-align: center; margin-bottom: 20px; }
+        nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; }
+        footer { margin-top: 30px; text-align: center; padding: 10px; background: #eee; font-size: 0.9em; }
+        .container { background: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        ul { list-style-type: square; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Blog Website</h1>
+        <nav>
+            <a href="{% url 'main' %}">Main Page</a> |
+            <a href="{% url 'users' %}">Users</a> |
+            <a href="{% url 'blogs' %}">Blog Posts</a> |
+            <a href="{% url 'categories' %}">Categories</a> |
+            <a href="{% url 'comments' %}">Comments</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Blog Website Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'blog/master.html' %}
+
+{% block content %}
+    <h2>{{ post.title }}</h2>
+    <p><strong>Category:</strong> {{ post.category.name }} | <strong>Published on:</strong> {{ post.date_published }}</p>
+    <hr>
+    <div style="margin-top: 20px; font-size: 1.2em; border-left: 4px solid #333; padding-left: 15px;">
+        {{ post.content }}
+    </div>
+    <br>
+    <a href="{% url 'blogs' %}">&larr; Back to All Blogs</a>
+{% endblock %}

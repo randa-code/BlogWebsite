@@ -1,0 +1,12 @@
+{% extends 'blog/master.html' %}
+
+{% block content %}
+    <h2>Dashboard / Main Control Panel</h2>
+    <p>Please use the links below or the navigation menu above to access and view the system tables:</p>
+    <ul>
+        <li><a href="{% url 'users' %}">View All Users</a> - Displays usernames and email addresses.</li>
+        <li><a href="{% url 'blogs' %}">View All Blog Titles</a> - Displays published post titles.</li>
+        <li><a href="{% url 'categories' %}">View All Categories</a> - List of available topics.</li>
+        <li><a href="{% url 'comments' %}">View All Comments</a> - Full archive of user feedback.</li>
+    </ul>
+{% endblock %}
